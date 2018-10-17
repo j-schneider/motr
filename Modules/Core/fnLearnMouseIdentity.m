@@ -1,6 +1,6 @@
 function  strctIdentity = fnLearnMouseIdentity(strMovieFileName, ...
                                                strctBootstrap, ...
-                                               strOutputFile)
+                                               strOutputFile,parMode)
 
 % Process a single single-mouse clip, and produce a set of registered mouse
 % images with the head to the right, and store these in a file.
@@ -58,7 +58,7 @@ end
 % movie.
 [a2fHOGFeatures,a2fHOGFeaturesFlipped,a3iPatches, ...
  afX,afY,afA,afB,afTheta]= ...
-  fnHOGFeaturesFromSMClip(strctMovInfo,a2bMask,a2fBackground);
+  fnHOGFeaturesFromSMClip(strctMovInfo,a2bMask,a2fBackground,parMode);
 
 % Store everything in a single structure.
 strctIdentity=struct('m_a2fMedian',a2fBackground, ...

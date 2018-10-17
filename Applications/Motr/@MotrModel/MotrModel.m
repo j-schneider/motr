@@ -14,6 +14,7 @@ classdef MotrModel < handle
         trainStatus
         trackStatus        
         clusterMode
+        parMode
     end
     
     properties  % protected, in spirit

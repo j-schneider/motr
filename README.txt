@@ -1,4 +1,24 @@
-This is the master branch of Motr (MOuse TRacker)
+This is my branch of Motr (MOuse TRacker)
+
+Attempting to let it use local multiple processors
+Will almost certainly break something for Cluster Computing
+
+======
+My Changes:
+
+- Added GUI option to use parallel processing for training
+(give it a second or two to start up the cores)
+- Training now can run on multiple cores per video
+- Added parfor-progress-monitor-progress-bar-v3 by Dylan Muir
+to monitor training progress
+- Tracking can now run on multiple cores, although output is now
+not as nice as updates are spat out together.
+
+
+
+
+
+
 ======
 
 Motr is a collaborative project between Janelia Farm and Caltech to

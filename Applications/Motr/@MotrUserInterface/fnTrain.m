@@ -48,6 +48,7 @@ end
 
 % get vars we need from userdata
 clusterMode=model.clusterMode;
+parMode=model.parMode;
 expDirName = model.expDirName;
 tuningDirName = fullfile(expDirName, 'Tuning');
 
@@ -148,7 +149,7 @@ for i=1:nClip ,
       set(self,'pointer','watch');
       drawnow('expose');  drawnow('update');
       try
-       fnLearnMouseIdentity(absoluteFileNameOfClip, strctBootstrap, outputFN{i});
+       fnLearnMouseIdentity(absoluteFileNameOfClip, strctBootstrap, outputFN{i},parMode);
       catch excp
         %excp.identifier
         set(self,'pointer','arrow');

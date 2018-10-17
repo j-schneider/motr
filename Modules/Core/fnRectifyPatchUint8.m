@@ -1,4 +1,4 @@
-function a2iRectifiedPatch = fnRectifyPatchUint8(a2iFrame,fX,fY,fTheta)
+function a2iRectifiedPatch = fnRectifyPatchUint8(a2iFrame,fX,fY,fTheta,temp_g)
 % Copyright (c) 2008 Shay Ohayon, California Institute of Technology. 
 % This file is a part of a free software. you can redistribute it and/or modify
 % it under the terms of the GNU General Public License as published by
@@ -7,10 +7,10 @@ function a2iRectifiedPatch = fnRectifyPatchUint8(a2iFrame,fX,fY,fTheta)
 % a2iFrame should be uint8.
 % On return, a2iRectifiedPatch is uint8.
 
-global g_strctGlobalParam
+%global g_strctGlobalParam
 
-iHalfHeight = (g_strctGlobalParam.m_strctClassifiers.m_fImagePatchHeight-1)/2;
-iHalfWidth = (g_strctGlobalParam.m_strctClassifiers.m_fImagePatchWidth-1)/2;
+iHalfHeight = (temp_g.m_strctClassifiers.m_fImagePatchHeight-1)/2;
+iHalfWidth = (temp_g.m_strctClassifiers.m_fImagePatchWidth-1)/2;
 
 R = [ cos(fTheta), sin(fTheta);
     -sin(fTheta), cos(fTheta)];
